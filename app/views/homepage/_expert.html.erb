@@ -5,6 +5,5 @@
   <span>(3)</span>
   <button onclick="location.href = '<%= user_path(expert) %>';" class="btn btn-primary" data-bss-hover-animate="pulse" type="button" style="background: var(--blue);">
     <i class="fa fa-hand-pointer-o mr-2"></i>View expert</button>
-  <button class="btn btn-primary" data-bss-hover-animate="pulse" type="button" style="background: var(--blue);">
-    <i class="fa fa-plus mr-2"></i>Add expert</button>
+  <%= add_friend_btn(expert) %>
 </div>
