@@ -2,7 +2,7 @@
             style="background: rgb(222,222,222);border-radius: 15px;">
   <span class='col-3'><%= expert.user_name %></span>
   <a class='col-3'  href="#" target="_blank"><%= expert.website %></a>
-  <span>(3)</span>
+  <span>Number of friends: (<%= expert.friends.count %>)</span>
   <button onclick="location.href = '<%= user_path(expert) %>';" class="btn btn-primary" data-bss-hover-animate="pulse" type="button" style="background: var(--blue);">
     <i class="fa fa-hand-pointer-o mr-2"></i>View expert</button>
   <%= add_friend_btn(expert) %>

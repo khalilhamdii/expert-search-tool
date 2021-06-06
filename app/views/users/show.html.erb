@@ -4,7 +4,7 @@
     <h3><%= @user.user_name %></h3>
     <div class="d-flex justify-content-around align-items-xl-center px-4 mt-4 w-100">
       <div><span>Website :&nbsp;</span><a href="#"><%= @user.website %></a></div>
-      <a href="#">See friends</a>
+      <%= link_to 'See friends', friendlist_path %>
     </div>
   </div>
   <h1 class="text-center my-4">Website headings</h1>

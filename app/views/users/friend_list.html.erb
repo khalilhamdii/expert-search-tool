@@ -1,0 +1,12 @@
+<main class="page mt-5">
+  <div class="container-fluid d-flex flex-column align-items-center py-4 min-vh-100">
+    <div class="mt-5 w-75">
+      <h1 class="text-center">Friends list</h1>
+      <div class="mt-4" style="text-align: center;">
+        <% @friendlist.each do |expert| %>
+          <%= render 'homepage/expert', expert: expert %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</main>
