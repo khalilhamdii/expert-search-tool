@@ -1,0 +1,8 @@
+.btn.btn-primary {
+  background: var(--blue);
+}
+input {
+  border-radius: 15px;
+  height: 33px;
+  border: 1px solid var(--blue);
+}
