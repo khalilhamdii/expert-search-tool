@@ -1,27 +1,27 @@
 <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient mb-5>
-  <div class="container"><a class="navbar-brand logo" href="#">Expert Search Tool</a><button data-toggle="collapse"
+  <div class="container"> <%= link_to 'Expert Search Tool', root_path, class: 'navbar-brand logo' %><button data-toggle="collapse"
       class="navbar-toggler" data-target="#navbarNav"><span class="sr-only">Toggle navigation</span><span
         class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
-         <li class="nav-item">
-                <%= link_to 'Home', root_path, class: 'nav-link active' %>
-            </li>
+        <li class="nav-item">
+          <%= link_to 'Home', root_path, class: 'nav-link active' %>
+        </li>
         <% if user_signed_in? %>
-            <li class="nav-item"><a class="nav-link" href="projects-grid-cards.html">Friends</a></li>
-            <li class="nav-item">
-                <%= link_to current_user.user_name, user_path(current_user), class: 'nav-link' %>
-            </li>
-            <li class="nav-item">
-                <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'nav-link' %>
-            </li>
+          <li class="nav-item"><a class="nav-link" href="projects-grid-cards.html">Friends</a></li>
+          <li class="nav-item">
+            <%= link_to current_user.user_name, user_path(current_user), class: 'nav-link' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'nav-link' %>
+          </li>
         <% else %>
-            <li class="nav-item">
-                <%= link_to 'Sign In', new_user_session_path, class: 'nav-link' %>
-            </li>
-            <li class="nav-item">
-                <%= link_to 'Register', new_user_registration_path, class: 'nav-link' %>
-            </li>
+          <li class="nav-item">
+            <%= link_to 'Sign In', new_user_session_path, class: 'nav-link' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Register', new_user_registration_path, class: 'nav-link' %>
+          </li>
         <% end %>
       </ul>
     </div>
